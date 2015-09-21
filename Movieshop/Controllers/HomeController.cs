@@ -6,6 +6,8 @@ using System.Web.Mvc;
 
 namespace Movieshop.Controllers
 {
+    //Everything is awesome 
+    //Ost er awesome
     public class HomeController : Controller
     {
         public ActionResult Index()
