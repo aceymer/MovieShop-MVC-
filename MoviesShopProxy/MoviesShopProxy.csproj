@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\MovieShopContextDBName.cs" />
+    <Compile Include="Context\MovieShopContextUsingConnectionString.cs" />
     <Compile Include="Context\MovieShopContext.cs" />
     <Compile Include="DomainModel\Movie.cs" />
     <Compile Include="Facade.cs" />

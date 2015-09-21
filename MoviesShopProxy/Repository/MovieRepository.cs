@@ -11,7 +11,7 @@ namespace MoviesShopProxy.Repository
     public class MovieRepository
     {
         public void Add(Movie movie) {
-            using (var ctx = new MovieShopContext())
+            using (var ctx = new MovieShopContextUsingConnectionString())
             {
                 //Movie movie = new Movie() { Id = 1, Price=200d, Title="Lego movie", Year=DateTime.Now.AddYears(-1) };
                 //Movie movie = ctx.Movies.FirstOrDefault(x => x.Id == 1);

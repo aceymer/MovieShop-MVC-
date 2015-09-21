@@ -14,7 +14,7 @@ namespace MovieTestConsole
     {
         static void Main(string[] args)
         {
-            Movie movie = new Movie() { Id = 1, Price = 200d, Title = "Lego movie", Year = DateTime.Now.AddYears(-1) };
+            Movie movie = new Movie() { Id = 2, Price = 200d, Title = "Lego movie 2", Year = DateTime.Now.AddYears(-1) };
             Facade facade = new Facade();
             facade.GetMovieRepository().Add(movie);
         }

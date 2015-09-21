@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace MoviesShopProxy.Context
 {
-    public class MovieShopContext : DbContext
+    public class MovieShopContextUsingConnectionString : DbContext
     {
-        public MovieShopContext(): base(){}
+        public MovieShopContextUsingConnectionString(): 
+            base("name=MovieShopDBConnectionString") {}
 
         public DbSet<Movie> Movies { get; set; }
-        
     }
 }
