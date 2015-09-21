@@ -7,8 +7,8 @@
 
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>7b12a661-e6f9-4e91-a1ed-0b55f0d335b3</ProjectGuid>
-    <RootNamespace>DAL</RootNamespace>
+    <ProjectGuid>9aafeae7-81ef-4e74-907d-fcde98d73d20</ProjectGuid>
+    <RootNamespace>MovieShopProxy</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">..\artifacts\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">..\artifacts\bin\$(MSBuildProjectName)\</OutputPath>
   </PropertyGroup>
