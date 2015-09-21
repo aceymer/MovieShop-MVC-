@@ -15,7 +15,7 @@ namespace Movieshop.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Hello Lars.";
 
             return View();
         }
