@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movieshop", "Movieshop\Movieshop.csproj", "{8DD3B2A8-3B4A-41B8-AD24-CAD88138A462}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesShopProxy", "MoviesShopProxy\MoviesShopProxy.csproj", "{0CC49F03-F6E4-4325-B7C5-F8902D23816F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTestConsole", "MovieTestConsole\MovieTestConsole.csproj", "{827604BE-4E88-48CD-A953-DFFF19CABFD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8DD3B2A8-3B4A-41B8-AD24-CAD88138A462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DD3B2A8-3B4A-41B8-AD24-CAD88138A462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DD3B2A8-3B4A-41B8-AD24-CAD88138A462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CC49F03-F6E4-4325-B7C5-F8902D23816F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC49F03-F6E4-4325-B7C5-F8902D23816F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC49F03-F6E4-4325-B7C5-F8902D23816F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC49F03-F6E4-4325-B7C5-F8902D23816F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{827604BE-4E88-48CD-A953-DFFF19CABFD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{827604BE-4E88-48CD-A953-DFFF19CABFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{827604BE-4E88-48CD-A953-DFFF19CABFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{827604BE-4E88-48CD-A953-DFFF19CABFD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
