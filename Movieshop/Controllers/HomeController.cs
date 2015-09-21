@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Movieshop.Controllers
 {
-    //Everything is awesome 
+    //Everything is awesome1 
     //Ost er awesome
     public class HomeController : Controller
     {
