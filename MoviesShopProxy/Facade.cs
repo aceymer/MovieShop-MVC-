@@ -10,6 +10,7 @@ namespace MoviesShopProxy
     public class Facade
     {
         private MovieRepository movieRepo;
+        private GenresRepository genresRepo;
 
         public MovieRepository GetMovieRepository()
         {
@@ -17,6 +18,15 @@ namespace MoviesShopProxy
                 movieRepo = new MovieRepository();
             }
             return movieRepo;
+        }
+        
+        public GenresRepository GetGenresRepository()
+        {
+            if (genresRepo == null)
+            {
+                genresRepo = new GenresRepository();
+            }
+            return genresRepo;
         }
     }
 }

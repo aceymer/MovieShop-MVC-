@@ -8,25 +8,26 @@ using System.Threading.Tasks;
 
 namespace MoviesShopProxy.Repository
 {
-    public class MovieRepository
+    public class GenresRepository
     {
-        public List<Movie> ReadAll() {
-            using (var ctx = new MovieShopContextDBName()) {
-                return ctx.Movies.ToList();
+
+        public List<Genre> ReadAll()
+        {
+            using (var ctx = new MovieShopContextDBName())
+            {
+                return ctx.Genres.ToList();
             }
         }
 
-        public void Add(Movie movie) {
+        public void Add(Genre genre)
+        {
             using (var ctx = new MovieShopContextDBName())
             {
                 //Create the queries
-                ctx.Movies.Add(movie);
+                ctx.Genres.Add(genre);
                 //Execute the queries
                 ctx.SaveChanges();
             }
         }
-
-
-
     }
 }
