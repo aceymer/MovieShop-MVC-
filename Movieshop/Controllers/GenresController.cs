@@ -52,7 +52,7 @@ namespace Movieshop.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name")] Genre genre)
         {
-            //I just added a line!
+            //I just added a line! Banan
             if (ModelState.IsValid)
             {
                 db.Genres.Add(genre);
