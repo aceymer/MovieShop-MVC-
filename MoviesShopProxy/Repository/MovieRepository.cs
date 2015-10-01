@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace MoviesShopProxy.Repository
 {
@@ -12,7 +12,7 @@ namespace MoviesShopProxy.Repository
     {
         public List<Movie> ReadAll() {
             using (var ctx = new MovieShopContextDBName()) {
-                return ctx.Movies.ToList();
+                return ctx.Movies.Include(a => a.Genre).ToList();
             }
         }
 

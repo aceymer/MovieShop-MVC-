@@ -10,7 +10,9 @@ namespace MoviesShopProxy.Context
 {
     public class MovieShopContextDBName : DbContext
     {
-        public MovieShopContextDBName(): base("MovieShop"){}
+        public MovieShopContextDBName(): base("MovieShop"){
+            Database.SetInitializer(new MovieDBInitialize());
+        }
 
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Genre> Genres { get; set; }

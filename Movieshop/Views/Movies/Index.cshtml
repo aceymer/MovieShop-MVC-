@@ -9,6 +9,36 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@*
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+                {
+                <div class="span3">
+                    <div class="well">
+                        <h2 class="muted">@item.Title</h2>
+                        <p><span class="label">POPULAR</span></p>
+                        <ul>
+                            <li>10 users</li>
+                            <li>Unlimited access</li>
+                            <li>3TB of space</li>
+                            <li>E-mail support</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+                        <hr>
+                        <h3>$15.99 / month</h3>
+                        <hr>
+                        <p><a class="btn btn-large" href="#"><i class="icon-ok"></i> Select plan</a></p>
+                    </div>
+                </div>
+
+            }
+        </div>
+  </div>
+ *@
+
+
+
 <table class="table">
     <tr>
         <th>
@@ -20,26 +50,37 @@
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
         <th></th>
     </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Year)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
+        @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @if (item.Genre != null)
+                        {
+                            @item.Genre.Name
+                        }
+                        
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class="btn btn-danger" }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        </div>
+    </div>
 </table>
