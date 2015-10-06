@@ -17,7 +17,6 @@ namespace Movieshop.Controllers
             List<Movie> movies = facade.GetMovieRepository().ReadAll();
             return View(movies);
         }
-
         public ActionResult Create()
         {
             return View();

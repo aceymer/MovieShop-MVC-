@@ -51,7 +51,7 @@
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Genre)
+            @Html.DisplayNameFor(model => model.Genres[0].Name)
         </th>
         <th></th>
     </tr>
@@ -68,9 +68,9 @@
                         @Html.DisplayFor(modelItem => item.Price)
                     </td>
                     <td>
-                        @if (item.Genre != null)
+                        @if (item.Genres != null)
                         {
-                            @item.Genre.Name
+                            @item.Genres[0].Name
                         }
                         
                     </td>

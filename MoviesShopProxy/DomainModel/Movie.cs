@@ -14,7 +14,6 @@ namespace MoviesShopProxy.DomainModel
         [Key]
         public int Id { get; set; }
         [Display(Name = "TinkyWinky")]
-        [StringLength(10)]
         public string Title { get; set; }
         [DataType("date")]
         [Display(Name = "Aweful drink")]
@@ -22,6 +21,6 @@ namespace MoviesShopProxy.DomainModel
         [Range(1, 9000)]
         [DataType("number")]
         public double Price { get; set; }
-        public virtual Genre Genre { get; set; }
+        public virtual List<Genre> Genres { get; set; }
     }
 }

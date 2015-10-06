@@ -21,6 +21,8 @@ namespace Movieshop.Controllers
         // GET: Genres
         public ActionResult Index()
         {
+            Session.Add("GenreSaved", new Genre { Id = 10, Name = "Smøvs" });
+          
             return View(facade.GetGenresRepository().ReadAll());
         }
 

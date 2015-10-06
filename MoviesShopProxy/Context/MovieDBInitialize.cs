@@ -13,7 +13,7 @@ namespace MoviesShopProxy.Context
     /// DropCreateDatabaseIfModelChanges
     /// </summary>
 
-    public class MovieDBInitialize : DropCreateDatabaseIfModelChanges<MovieShopContextDBName>
+    public class MovieDBInitialize : DropCreateDatabaseAlways<MovieShopContextDBName>
     {
         protected override void Seed(MovieShopContextDBName context)
         {
@@ -22,10 +22,10 @@ namespace MoviesShopProxy.Context
             Genre g2 = context.Genres.Add(new Genre() { Name = "Cool" });
             Genre g3 = context.Genres.Add(new Genre() { Name = "Cheese" });
 
-            context.Movies.Add(new Movie() { Price = 102, Genre = g1, Title="Toad 2", Year=DateTime.Now.AddYears(-20) });
-            context.Movies.Add(new Movie() { Price = 103, Genre = g3, Title = "Toad", Year = DateTime.Now.AddYears(-30) });
-            context.Movies.Add(new Movie() { Price = 110, Genre = g3, Title = "Toad 3", Year = DateTime.Now.AddYears(-10) });
-            context.Movies.Add(new Movie() { Price = 130, Genre = g1, Title = "Toad 4", Year = DateTime.Now.AddYears(-1) });
+            context.Movies.Add(new Movie() { Price = 102, Genres = new List<Genre> { g1, g2 }, Title="Toad 2", Year=DateTime.Now.AddYears(-20) });
+            context.Movies.Add(new Movie() { Price = 103, Genres = new List<Genre> { g3, g2 }, Title = "Toad", Year = DateTime.Now.AddYears(-30) });
+            context.Movies.Add(new Movie() { Price = 110, Genres = new List<Genre> { g1, g2 }, Title = "Toad 3", Year = DateTime.Now.AddYears(-10) });
+            context.Movies.Add(new Movie() { Price = 130, Genres = new List<Genre> { g3, g2 }, Title = "Toad 4", Year = DateTime.Now.AddYears(-1) });
             
             base.Seed(context);
         }
