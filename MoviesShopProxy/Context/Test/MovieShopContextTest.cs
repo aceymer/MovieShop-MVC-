@@ -8,18 +8,16 @@ using System.Threading.Tasks;
 
 namespace MoviesShopProxy.Context
 {
-    public class MovieShopContextDBName : DbContext
+    public class MovieShopContextTest : MovieShopContext
     {
-        public MovieShopContextDBName(): base("MovieShop"){
-            Database.SetInitializer(new MovieDBInitialize());
+        public MovieShopContextTest(): base("MovieShopTest"){
+            Database.SetInitializer(new MovieDBInitializeTest());
+            
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Movie>().HasMany(x => x.Genres).WithMany(y => y.Movies);
         }
-
-        public DbSet<Movie> Movies { get; set; }
-        public DbSet<Genre> Genres { get; set; }
     }
 }

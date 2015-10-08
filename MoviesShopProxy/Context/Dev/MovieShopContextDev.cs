@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace MoviesShopProxy.Context
 {
-    public class MovieShopContext : DbContext
+    public class MovieShopContextDev : MovieShopContext
     {
-        public MovieShopContext(string name): base(name)
+        public MovieShopContextDev(): base("MovieShopDev")
         {
+            Database.SetInitializer(new MovieDBInitializeDev());
         }
+       
 
-        public DbSet<Movie> Movies { get; set; }
-        public DbSet<Genre> Genres { get; set; }
     }
 }

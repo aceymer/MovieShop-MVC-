@@ -13,9 +13,9 @@ namespace MoviesShopProxy.Context
     /// DropCreateDatabaseIfModelChanges
     /// </summary>
 
-    public class MovieDBInitialize : DropCreateDatabaseAlways<MovieShopContextDBName>
+    public class MovieDBInitializeDev : DropCreateDatabaseAlways<MovieShopContextDev>
     {
-        protected override void Seed(MovieShopContextDBName context)
+        protected override void Seed(MovieShopContextDev context)
         {
          
             Genre g1 = context.Genres.Add(new Genre() { Name = "Nice" });

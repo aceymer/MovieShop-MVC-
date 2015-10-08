@@ -28,5 +28,11 @@ namespace Movieshop.Controllers
             facade.GetMovieRepository().Add(movie);
             return Redirect("Index");
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            facade.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }
