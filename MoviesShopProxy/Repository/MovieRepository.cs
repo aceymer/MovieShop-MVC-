@@ -22,7 +22,7 @@ namespace MoviesShopProxy.Repository
         }
         public Movie Read(int id)
         {
-            return ctx.Movies.Include(a => a.Genres).FirstOrDefault(m => m.Id == id);
+            return ctx.Movies.Where(m => m.Id == id).Include(a => a.Genres).FirstOrDefault();
         }
 
         public Movie Add(Movie movie) {
@@ -47,7 +47,16 @@ namespace MoviesShopProxy.Repository
 
         public Movie Remove(Movie movieToRemove)
         {
-            throw new NotImplementedException();
+            var removed = ctx.Movies.Remove(movieToRemove);
+            ctx.SaveChanges();
+            return removed;
+        }
+
+        public Movie Update(Movie movie)
+        {
+            Movie movieUpdated = ctx.Movies.Attach(movie);
+            ctx.SaveChanges();
+            return movieUpdated;
         }
     }
 }

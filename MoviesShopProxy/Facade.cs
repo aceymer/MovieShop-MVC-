@@ -14,10 +14,21 @@ namespace MoviesShopProxy
         private MovieRepository movieRepo;
         private GenresRepository genresRepo;
 
-        public Facade(MovieShopContext context = null)
+        public Facade()
+        {
+            ctx = new MovieShopContextDev();
+        }
+
+        public Facade(MovieShopContext context)
+        {
+            ctx = context;
+        }
+
+        /*public Facade(MovieShopContext context = null)
         {
             ctx = context != null ? context : new MovieShopContextDev();
         }
+        */
 
         public MovieRepository GetMovieRepository()
         {
@@ -27,12 +38,8 @@ namespace MoviesShopProxy
         
         public GenresRepository GetGenresRepository()
         {
-           return genresRepo = new GenresRepository();
+           return genresRepo = new GenresRepository(ctx);
         }
-
-        public void Dispose()
-        {
-            ctx.Dispose();
-        }
+        
     }
 }

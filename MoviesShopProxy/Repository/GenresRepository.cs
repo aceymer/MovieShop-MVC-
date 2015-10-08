@@ -10,24 +10,24 @@ namespace MoviesShopProxy.Repository
 {
     public class GenresRepository
     {
+        MovieShopContext ctx;
+
+        public GenresRepository(MovieShopContext context)
+        {
+            ctx = context;
+        }
 
         public List<Genre> ReadAll()
         {
-            using (var ctx = new MovieShopContextTest())
-            {
-                return ctx.Genres.ToList();
-            }
+            return ctx.Genres.ToList();
         }
 
         public void Add(Genre genre)
         {
-            using (var ctx = new MovieShopContextTest())
-            {
-                //Create the queries
-                ctx.Genres.Add(genre);
-                //Execute the queries
-                ctx.SaveChanges();
-            }
+            //Create the queries
+            ctx.Genres.Add(genre);
+            //Execute the queries
+            ctx.SaveChanges();
         }
     }
 }

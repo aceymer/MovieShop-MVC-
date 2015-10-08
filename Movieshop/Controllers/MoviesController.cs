@@ -29,10 +29,5 @@ namespace Movieshop.Controllers
             return Redirect("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            facade.Dispose();
-            base.Dispose(disposing);
-        }
     }
 }
